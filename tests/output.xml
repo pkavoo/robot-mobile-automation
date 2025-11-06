@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.7 on darwin)" generated="20251106 21:32:33.193" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="/Users/polycarpkavoo/Downloads/Assignment/robotframework-appium-automation/tests">
+<suite id="s1-s1" name="Android Basic Interactions.Test" source="/Users/polycarpkavoo/Downloads/Assignment/robotframework-appium-automation/tests/android_basic_interactions.test.robot">
+<test id="s1-s1-t1" name="Should send keys to search box and then check the value" line="7">
+<kw name="Open Android Test App" library="resource">
+<arg>.app.SearchInvoke</arg>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<arg>appActivity=${appActivity}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" starttime="20251106 21:32:33.686" endtime="20251106 21:32:42.033"/>
+</kw>
+<status status="PASS" starttime="20251106 21:32:33.686" endtime="20251106 21:32:42.033"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>txt_query_prefill</arg>
+<arg>Hello world!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20251106 21:32:42.034" level="INFO">Typing text 'Hello world!' into text field 'txt_query_prefill'</msg>
+<msg timestamp="20251106 21:32:42.433" level="INFO">criteria is txt_query_prefill</msg>
+<status status="PASS" starttime="20251106 21:32:42.033" endtime="20251106 21:32:42.433"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>btn_start_search</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<msg timestamp="20251106 21:32:42.435" level="INFO">Clicking element 'btn_start_search'.</msg>
+<msg timestamp="20251106 21:32:43.029" level="INFO">criteria is btn_start_search</msg>
+<status status="PASS" starttime="20251106 21:32:42.433" endtime="20251106 21:32:43.029"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>android:id/search_src_text</arg>
+<doc>Waits until the element specified by the ``locator`` appears on the current page.</doc>
+<msg timestamp="20251106 21:32:44.311" level="INFO">criteria is android:id/search_src_text
+criteria is android:id/search_src_text</msg>
+<status status="PASS" starttime="20251106 21:32:43.030" endtime="20251106 21:32:44.311"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>android:id/search_src_text</arg>
+<arg>Hello world!</arg>
+<doc>Verifies that the element identified by ``locator`` contains the exact text ``expected``.</doc>
+<msg timestamp="20251106 21:32:44.312" level="INFO">Verifying element 'android:id/search_src_text' contains exactly text 'Hello world!'.</msg>
+<msg timestamp="20251106 21:32:44.385" level="INFO">criteria is android:id/search_src_text</msg>
+<status status="PASS" starttime="20251106 21:32:44.311" endtime="20251106 21:32:44.386"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" starttime="20251106 21:32:44.387" endtime="20251106 21:32:44.999"/>
+</kw>
+<status status="PASS" starttime="20251106 21:32:33.686" endtime="20251106 21:32:45.000"/>
+</test>
+<test id="s1-s1-t2" name="Should click a button that opens an alert and then dismisses it" line="14">
+<kw name="Open Android Test App" library="resource">
+<arg>.app.AlertDialogSamples</arg>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<arg>appActivity=${appActivity}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" starttime="20251106 21:32:45.002" endtime="20251106 21:32:51.618"/>
+</kw>
+<status status="PASS" starttime="20251106 21:32:45.001" endtime="20251106 21:32:51.618"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>two_buttons</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<msg timestamp="20251106 21:32:51.619" level="INFO">Clicking element 'two_buttons'.</msg>
+<msg timestamp="20251106 21:32:53.124" level="INFO">criteria is two_buttons</msg>
+<status status="PASS" starttime="20251106 21:32:51.618" endtime="20251106 21:32:53.124"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>android:id/alertTitle</arg>
+<doc>Waits until the element specified by the ``locator`` appears on the current page.</doc>
+<msg timestamp="20251106 21:32:53.228" level="INFO">criteria is android:id/alertTitle</msg>
+<status status="PASS" starttime="20251106 21:32:53.124" endtime="20251106 21:32:53.228"/>
+</kw>
+<kw name="Element Should Contain Text" library="AppiumLibrary">
+<arg>android:id/alertTitle</arg>
+<arg>Lorem ipsum dolor sit aie consectetur adipiscing</arg>
+<doc>Verifies the element identified by ``locator`` contains the text ``expected``.</doc>
+<msg timestamp="20251106 21:32:53.230" level="INFO">Verifying element 'android:id/alertTitle' contains text 'Lorem ipsum dolor sit aie consectetur adipiscing'.</msg>
+<msg timestamp="20251106 21:32:53.339" level="INFO">criteria is android:id/alertTitle</msg>
+<status status="PASS" starttime="20251106 21:32:53.228" endtime="20251106 21:32:53.339"/>
+</kw>
+<kw name="Get Webelement" library="AppiumLibrary">
+<var>${close_dialog_button}</var>
+<arg>android:id/button1</arg>
+<doc>Returns the first [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] object matching ``locator``.</doc>
+<msg timestamp="20251106 21:32:53.359" level="INFO">criteria is android:id/button1</msg>
+<msg timestamp="20251106 21:32:53.359" level="INFO">${close_dialog_button} = &lt;appium.webdriver.webelement.WebElement (session="0959c748-5c07-4cee-8440-e967e0d90f81", element="00000000-0000-03d1-ffff-ffff0000002b")&gt;</msg>
+<status status="PASS" starttime="20251106 21:32:53.339" endtime="20251106 21:32:53.360"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${close_dialog_button}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<msg timestamp="20251106 21:32:53.362" level="INFO">Clicking element '&lt;appium.webdriver.webelement.WebElement (session="0959c748-5c07-4cee-8440-e967e0d90f81", element="00000000-0000-03d1-ffff-ffff0000002b")&gt;'.</msg>
+<status status="PASS" starttime="20251106 21:32:53.360" endtime="20251106 21:32:53.408"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" starttime="20251106 21:32:53.408" endtime="20251106 21:32:53.890"/>
+</kw>
+<status status="PASS" starttime="20251106 21:32:45.000" endtime="20251106 21:32:53.890"/>
+</test>
+<doc>Android Basic Interactions Tests</doc>
+<status status="PASS" starttime="20251106 21:32:33.230" endtime="20251106 21:32:53.891"/>
+</suite>
+<suite id="s1-s2" name="Android Create Session.Test" source="/Users/polycarpkavoo/Downloads/Assignment/robotframework-appium-automation/tests/android_create_session.test.robot">
+<test id="s1-s2-t1" name="Should Create and Destroy Android Session" line="6">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" starttime="20251106 21:32:53.895" endtime="20251106 21:33:00.595"/>
+</kw>
+<kw name="Get Activity" library="AppiumLibrary">
+<var>${activity}</var>
+<doc>Retrieves the current activity on the device.</doc>
+<msg timestamp="20251106 21:33:00.748" level="INFO">${activity} = .ApiDemos</msg>
+<status status="PASS" starttime="20251106 21:33:00.595" endtime="20251106 21:33:00.748"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${activity}</arg>
+<arg>.ApiDemos</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20251106 21:33:00.749" endtime="20251106 21:33:00.749"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" starttime="20251106 21:33:00.749" endtime="20251106 21:33:01.362"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20251106 21:33:04.364" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20251106 21:33:01.362" endtime="20251106 21:33:04.364"/>
+</kw>
+<kw name="Run Keyword And Expect Error" library="BuiltIn">
+<arg>No application is open</arg>
+<arg>get activity</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<kw name="Get Activity" library="AppiumLibrary">
+<doc>Retrieves the current activity on the device.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20251106 21:33:04.367" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20251106 21:33:04.366" endtime="20251106 21:33:04.376"/>
+</kw>
+<msg timestamp="20251106 21:33:04.377" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20251106 21:33:04.378" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20251106 21:33:04.366" endtime="20251106 21:33:04.378"/>
+</kw>
+<status status="PASS" starttime="20251106 21:33:04.365" endtime="20251106 21:33:04.378"/>
+</kw>
+<status status="PASS" starttime="20251106 21:32:53.895" endtime="20251106 21:33:04.379"/>
+</test>
+<doc>Android Create Native Test Session</doc>
+<status status="PASS" starttime="20251106 21:32:53.892" endtime="20251106 21:33:04.379"/>
+</suite>
+<suite id="s1-s3" name="Android Selectors.Test" source="/Users/polycarpkavoo/Downloads/Assignment/robotframework-appium-automation/tests/android_selectors.test.robot">
+<test id="s1-s3-t1" name="Should find elements by Accessibility ID" line="8">
+<kw name="Open Android Test App" library="resource" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<arg>appActivity=${appActivity}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" starttime="20251106 21:33:04.384" endtime="20251106 21:33:11.278"/>
+</kw>
+<status status="PASS" starttime="20251106 21:33:04.383" endtime="20251106 21:33:11.278"/>
+</kw>
+<kw name="Get Webelement" library="AppiumLibrary">
+<var>${element}</var>
+<arg>accessibility_id=Content</arg>
+<doc>Returns the first [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] object matching ``locator``.</doc>
+<msg timestamp="20251106 21:33:11.336" level="INFO">${element} = &lt;appium.webdriver.webelement.WebElement (session="264a983d-4df5-419c-8e44-9dd817cdce69", element="00000000-0000-03ed-ffff-ffff0000000d")&gt;</msg>
+<status status="PASS" starttime="20251106 21:33:11.279" endtime="20251106 21:33:11.336"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" starttime="20251106 21:33:11.336" endtime="20251106 21:33:11.361"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" starttime="20251106 21:33:11.361" endtime="20251106 21:33:11.900"/>
+</kw>
+<status status="PASS" starttime="20251106 21:33:04.383" endtime="20251106 21:33:11.900"/>
+</test>
+<test id="s1-s3-t2" name="Should find elements by ID" line="12">
+<kw name="Open Android Test App" library="resource" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<arg>appActivity=${appActivity}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" starttime="20251106 21:33:11.903" endtime="20251106 21:33:18.608"/>
+</kw>
+<status status="PASS" starttime="20251106 21:33:11.902" endtime="20251106 21:33:18.608"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>android:id/action_bar_container</arg>
+<doc>Verifies that the current page contains the element with the ``locator``.</doc>
+<msg timestamp="20251106 21:33:18.653" level="INFO">Current page contains element 'android:id/action_bar_container'.</msg>
+<msg timestamp="20251106 21:33:18.653" level="INFO">criteria is android:id/action_bar_container</msg>
+<status status="PASS" starttime="20251106 21:33:18.609" endtime="20251106 21:33:18.653"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" starttime="20251106 21:33:18.654" endtime="20251106 21:33:19.107"/>
+</kw>
+<status status="PASS" starttime="20251106 21:33:11.901" endtime="20251106 21:33:19.107"/>
+</test>
+<test id="s1-s3-t3" name="Should find elements by class name" line="15">
+<kw name="Open Android Test App" library="resource" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<arg>appActivity=${appActivity}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" starttime="20251106 21:33:19.109" endtime="20251106 21:33:25.754"/>
+</kw>
+<status status="PASS" starttime="20251106 21:33:19.108" endtime="20251106 21:33:25.754"/>
+</kw>
+<kw name="Get Webelements" library="AppiumLibrary">
+<var>@{elements}</var>
+<arg>class=android.widget.FrameLayout</arg>
+<doc>Returns a list of [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] objects matching ``locator``.</doc>
+<msg timestamp="20251106 21:33:25.802" level="INFO">@{elements} = [ &lt;appium.webdriver.webelement.WebElement (session="cac3d682-d8e2-4d53-8669-0ccbd19c1180", element="00000000-0000-0409-ffff-ffff00000003")&gt; | &lt;appium.webdriver.webelement.WebElement (session="cac3d682...</msg>
+<status status="PASS" starttime="20251106 21:33:25.755" endtime="20251106 21:33:25.802"/>
+</kw>
+<kw name="Length Should Be" library="BuiltIn">
+<arg>${elements}</arg>
+<arg>3</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<msg timestamp="20251106 21:33:25.802" level="INFO">Length is 3</msg>
+<status status="PASS" starttime="20251106 21:33:25.802" endtime="20251106 21:33:25.802"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" starttime="20251106 21:33:25.802" endtime="20251106 21:33:26.279"/>
+</kw>
+<status status="PASS" starttime="20251106 21:33:19.107" endtime="20251106 21:33:26.279"/>
+</test>
+<test id="s1-s3-t4" name="Should find elements by XPath" line="19">
+<kw name="Open Android Test App" library="resource" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<arg>appActivity=${appActivity}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" starttime="20251106 21:33:26.281" endtime="20251106 21:33:32.989"/>
+</kw>
+<status status="PASS" starttime="20251106 21:33:26.280" endtime="20251106 21:33:32.989"/>
+</kw>
+<kw name="Get Webelements" library="AppiumLibrary">
+<var>@{elements}</var>
+<arg>//*[@class='android.widget.FrameLayout']</arg>
+<doc>Returns a list of [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] objects matching ``locator``.</doc>
+<msg timestamp="20251106 21:33:33.222" level="INFO">xpath criteria: //*[@class='android.widget.FrameLayout']</msg>
+<msg timestamp="20251106 21:33:33.222" level="INFO">@{elements} = [ &lt;appium.webdriver.webelement.WebElement (session="75fb987c-4c83-464a-81a4-44b1fe014f62", element="00000000-0000-0417-ffff-ffff7ffffffe")&gt; | &lt;appium.webdriver.webelement.WebElement (session="75fb987c...</msg>
+<status status="PASS" starttime="20251106 21:33:32.989" endtime="20251106 21:33:33.222"/>
+</kw>
+<kw name="Length Should Be" library="BuiltIn">
+<arg>${elements}</arg>
+<arg>3</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<msg timestamp="20251106 21:33:33.223" level="INFO">Length is 3</msg>
+<status status="PASS" starttime="20251106 21:33:33.223" endtime="20251106 21:33:33.223"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" starttime="20251106 21:33:33.223" endtime="20251106 21:33:33.706"/>
+</kw>
+<status status="PASS" starttime="20251106 21:33:26.279" endtime="20251106 21:33:33.707"/>
+</test>
+<doc>Android Selector Strategies</doc>
+<status status="PASS" starttime="20251106 21:33:04.380" endtime="20251106 21:33:33.707"/>
+</suite>
+<status status="PASS" starttime="20251106 21:32:33.196" endtime="20251106 21:33:33.709"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Android Basic Interactions.Test">Tests.Android Basic Interactions.Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Android Create Session.Test">Tests.Android Create Session.Test</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s3" name="Android Selectors.Test">Tests.Android Selectors.Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20251106 21:33:04.377" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
