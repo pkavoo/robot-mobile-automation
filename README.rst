@@ -70,7 +70,7 @@ Install all required Python libraries, including Robot Framework, AppiumLibrary,
 4. Configure Capabilities
 *************************
 
-The project relies on variables defined in :file:`resources/TestVariables.py`. **You MUST update the following two variables** to match your local setup:
+The project relies on variables defined in :file:`resources/resources.robot`. **Update the following two variables** to match your local setup:
 
 * **APP_PATH:** Absolute path to the **``ApiDemos-debug.apk``** file.
 * **PLATFORM\_VERSION:** The **exact OS version** (e.g., ``13``) of your running emulator/device.
@@ -99,7 +99,7 @@ Launch an Android Virtual Device (AVD) using Android Studio's AVD Manager. Ensur
 Execution
 ------------
 
-Tests should be run from the project root directory (:file:`SDET-Mobile-Automation/`).
+Tests should be run from the project root directory (:file:`Robot-Mobile-Automation/`).
 
 Run All Tests
 ****************
